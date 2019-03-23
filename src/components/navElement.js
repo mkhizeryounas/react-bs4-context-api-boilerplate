@@ -8,7 +8,7 @@ class NavElement extends Component {
       <Link
         className={
           `nav-link` +
-          (this.props.location.pathname == this.props.link ? " active" : "")
+          (this.props.location.pathname === this.props.link ? " active" : "")
         }
         to={this.props.link}
       >

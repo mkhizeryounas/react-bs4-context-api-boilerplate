@@ -28,10 +28,10 @@ class Navbar extends Component {
               <NavElement name="Home" link="/" />
             </li>
             <li className="nav-item">
-              <NavElement name="About" link="/about" />
+              <NavElement name="Dashboard" link="/dashboard" />
             </li>
             <li className="nav-item">
-              <NavElement name="Users" link="/users" />
+              <NavElement name="Not Found" link="/not-found" />
             </li>
           </ul>
         </div>

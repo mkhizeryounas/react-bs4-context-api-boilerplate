@@ -9,9 +9,7 @@ class AppProvider extends Component {
     isLoggedIn: "false",
     counter: 0
   };
-  componentDidMount() {
-    console.log("this.props.location", this.props);
-  }
+  componentDidMount() {}
   increment = () => {
     this.setState({ counter: this.state.counter + 1 });
   };

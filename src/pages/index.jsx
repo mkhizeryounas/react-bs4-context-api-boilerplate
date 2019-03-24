@@ -4,6 +4,9 @@ import { withAppContext } from "../contexts/app.context";
 
 class Index extends Component {
   state = {};
+  componentDidMount() {
+    window.document.title = "Home";
+  }
   handleCounter() {
     this.props.context.actions.increment();
     console.log("this.props.context", this.props.context);

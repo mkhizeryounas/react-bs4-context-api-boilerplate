@@ -9,7 +9,9 @@ class Navbar extends Component {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">
-          Shopcast
+          <code>
+            <i className="fa fa-sitemap" /> shopcast
+          </code>
         </Link>
         <button
           className="navbar-toggler"
@@ -33,6 +35,31 @@ class Navbar extends Component {
             </li>
             <li className="nav-item">
               <NavElement name="Not Found" link="/not-found" />
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a className="dropdown-item" href="#">
+                  Action
+                </a>
+                <a className="dropdown-item" href="#">
+                  Another action
+                </a>
+                <div className="dropdown-divider" />
+                <a className="dropdown-item" href="#">
+                  Something else here
+                </a>
+              </div>
             </li>
           </ul>
         </div>

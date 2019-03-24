@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import AuthButton from "./auth/authButton";
 
 class Dashboard extends Component {
   state = {};
@@ -6,6 +7,7 @@ class Dashboard extends Component {
     return (
       <div>
         <h1>Dashboard</h1>
+        <AuthButton />
       </div>
     );
   }

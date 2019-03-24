@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // APP CONTEXT
@@ -17,9 +17,10 @@ import Dashboard from "./pages/dashboard";
 
 class App extends Component {
   render() {
+    console.log(this.props.location);
     return (
-      <AppProvider>
-        <Router>
+      <Router>
+        <AppProvider>
           <div>
             <Navbar />
             <div className="container mt-2">
@@ -32,8 +33,8 @@ class App extends Component {
               </Switch>
             </div>
           </div>
-        </Router>
-      </AppProvider>
+        </AppProvider>
+      </Router>
     );
   }
 }

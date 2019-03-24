@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { withContext } from "with-context";
-
+import { withRouter } from "react-router-dom";
 export const AppContext = React.createContext();
 export const withAppContext = withContext(AppContext);
 
@@ -9,8 +9,11 @@ class AppProvider extends Component {
     isLoggedIn: "false",
     counter: 0
   };
+  componentDidMount() {
+    console.log("this.props.location", this.props);
+  }
   increment = () => {
-    this.setState({ counter: ++this.state.counter });
+    this.setState({ counter: this.state.counter + 1 });
   };
   render() {
     return (
@@ -23,4 +26,4 @@ class AppProvider extends Component {
   }
 }
 
-export default AppProvider;
+export default withRouter(AppProvider);

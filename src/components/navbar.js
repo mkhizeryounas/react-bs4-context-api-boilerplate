@@ -1,15 +1,16 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import NavElement from "./navElement";
-
+import { Link } from "react-router-dom";
+import { withAppContext } from "../contexts/app.context";
 class Navbar extends Component {
   state = {};
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to="/">
           Shopcast
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -40,4 +41,4 @@ class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar);
+export default withAppContext(withRouter(Navbar));
